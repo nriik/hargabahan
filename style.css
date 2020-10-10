@@ -1,0 +1,190 @@
+input {
+  width: 300px;
+  height: 35px;
+  font-size: 20px;
+  text-align: right;
+  float: center;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  display:block;
+  margin:0px auto;
+}
+h2 {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  font-size: 25px;
+  margin-right: 50px;
+}
+
+body {
+  background-image: url(/background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+  position: absolute;
+  overflow: auto;
+}
+label {
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  line-height: 45%;
+  font-size: 15px;
+}
+
+.sidenav {
+  max-height: 95%;
+  overflow: auto;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #cfc;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav2 {
+  max-height: 95%;
+  overflow: auto;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #cfc;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav2 a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav2 a:hover {
+  color: #f1f1f1;
+}
+
+#clsbtn {
+  position: absolute;
+  top: 7;
+  right: 25px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.main {
+  width: 100%;
+  transition: margin-left .5s;
+  position: fixed;
+  padding: 16px;
+  display: none;
+  top: 60;
+  max-width: 100%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .sidenav2 {padding-top: 15px;}
+  .sidenav2 a {font-size: 18px;}
+}
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: transparent;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: 2px;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.button-flat-outline {
+    border: 1px solid #0000ff;        /* border: tebal[px] tipe[solid,dashed,dotted] warna[#hex, rgb()]; */
+    background: rgba(255,255,255,0.5);          /* set warna background menjadi transparan */
+    color: #000;                   /* ubah warna font */
+    font-size: 16px;                  /* ubah ukuran font */
+    padding: 0.5em 1em 0.5em 1em;
+    text-transform: uppercase; 
+    border-radius: 5%        /* padding: top right bottom left; */
+}
+.button-flat-outline:hover {
+    opacity: 0.8;                     /* ubah tingkat transparansi saat cursor menuju button. 0.0 s.d 1.0 */
+}
+.button-flat-outline:active {
+    background: #550000;              /* ubah background saat button ditekan */
+    color: #FFFFFF;                   /* set warna font menjadi putih */       
+}

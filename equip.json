@@ -1,0 +1,95 @@
+[{"weapon":[
+	{"melee":[
+	{"brass_knuckles":[{"hard_aluminium_alloy":10}, {"claw":24}, {"beast_horn":13}, {"polymer_coating":4}]},
+	{"barb_wire_bat":[{"pig_iron":15}, {"bone":16}, {"claw":16}]},
+	{"kukri":[{"wood":600}, {"stone":150}, {"hemp":15}, {"iron_ore":4}]},
+	{"long_knife":[{"steel":13}, {"spring":10}, {"beast_blood":32}, {"polymer_coating":5}, {"tactical_fender":5}]},
+	{"stun_baton":[{"weapon_part":10}, {"screw":18}, {"spring":11}, {"polymer_coating":6}, {"tactical_fender":6}]},
+	{"sawblade":[{"high_temperature_alloy":10}, {"weapon_part":11}, {"mutant_feather":8}, {"polymer_coating":6}, {"tactical_fender":6}]},
+	{"zanbato":[{"nylon_cloth":10}, {"iron_casting":12}, {"cloth":12}, {"claw":24}, {"film_fabric":4}]},
+	{"cutting_edge":[{"special_cast_iron":12}, {"blended_material":20}, {"elastic_rubber":14}, {"tactical_fender":12}, {"polymer_coating":12}]}
+	]},
+	{"bow":[
+	{"compound_bow":[{"iron_casting":10}, {"screw":10}, {"beast_tendon":10}, {"glue":8}]},
+	{"reflex_bow":[{"hexagon_nail":12}, {"iron_casting":12}, {"plastic":12}, {"beast_tendon":13}, {"polymer_coating":4}]},
+	{"spider_bow":[{"screw":12},{"iron_casting":12}, {"plastic":12}, {"beast_tendon":13},{"polymer_coating":4}]}
+	]},
+	{"shotgun":[
+	{"590m":[{"hard_aluminium_alloy":10}, {"pig_iron":23}, {"screw":12}, {"polymer_coating":4}]},
+	{"ksg":[{"weapon_part":10}, {"titanium_alloy":10}, {"dormant_insect_egg":7}, {"polymer_coating":6}, {"tactical_fender":6}]},
+	{"rds":[{"special_cast_iron":12}, {"medium_carbon_stell":20}, {"elastic_rubber":14}, {"tactical_fender":12}, {"polymer_coating":12}]},
+	{"lead_shove":[{"hexagon_nail":12}, {"iron_casting":12}, {"cloth":12}, {"bone":24}, {"polymer_coating":4}]}
+	]},
+	{"smg":[
+	{"uzi":[{"iron_casting":10}, {"hexagon_nail":10}, {"claw":20}]},
+	{"ump9":[{"hard_aluminium_alloy":10}, {"hexagon_nail":12}, {"grease":24}, {"polymer_coating":4}]},
+	{"thompson":[{"hard_aluminium_alloy":10}, {"iron_casting":12}, {"plastic":12}, {"polyster_cloth":10}, {"polymer_coating":4}]},
+	{"mp5":[{"steel_pipe":10}, {"pig_iron":23}, {"screw":12}, {"polymer_coating":4}]},
+	{"submachinegun":[{"weapon_part":10}, {"titanium_alloy":10}, {"spring":11}, {"polymer_coating":6}, {"tactical_fender":6}]}
+	]},
+	{"assault_rifles":[
+	{"ak47":[{"steel_pipe":10}, {"steel":10}, {"nail":10}, {"polymer_coating":4}]},
+	{"tavor":[{"spring":10}, {"engineering_plastic":10}, {"hard_aluminium_alloy":13}, {"polymer_coating":5}]},
+	{"m416":[{"spring":11}, {"engineering_plastic":11}, {"steel_pipe":14}, {"polymer_coating":6}, {"tactical_fender":6}]},
+	{"type95":[{"screw":12}, {"iron_casting":12}, {"cloth":12}, {"claw":24}, {"polymer_coating":4}]},
+	{"a2":[{"weapon_part":10}, {"titanium_alloy":10}, {"engineering_plastic":11}, {"polymer_coating":6}, {"tactical_fender":6}]},
+	{"g36c":[{"high_temperature_alloy":10}, {"weapon_part":11}, {"mutant_feather":8}, {"polymer_coating":6}, {"tactical_fender":6}]},
+	{"an94":[{"high_temperature_alloy":10}, {"weapon_part":11}, {"mutant_feather":8}, {"polymer_coating":6}, {"tactical_fender":6}]},
+	{"electric_arc":[{"medium_carbon_stell":10}, {"concrete":10}, {"special_part":8}, {"polymer_coating":7}, {"tactical_fender":7}]}
+	]},
+	{"sniper_rifles":[
+	{"mosin_nagant":[{"steel":10}, {"steel_pipe":10}, {"screw":12}, {"polymer_coating":4}]},
+	{"m24":[{"steel_pipe":10}, {"hard_aluminium_alloy":10}, {"hexagon_nail":12}, {"polymer_coating":4}]},
+	{"as50":[{"hard_aluminium_alloy":13}, {"engineering_plastic":10}, {"steel_pipe":13}, {"polymer_coating":5}, {"tactical_fender":5}]},
+	{"dsr":[{"high_temperature_alloy":10}, {"weapon_part":11}, {"mutant_feather":8}, {"polymer_coating":6}, {"tactical_fender":6}]},
+	{"awm":[{"weapon_part":10}, {"titanium_alloy":10}, {"engineering_plastic":11}, {"polymer_coating":6}, {"tactical_fender":6}]},
+	{"svd":[{"medium_carbon_stell":10}, {"high_temperature_alloy":10}, {"special_part":8}, {"polymer_coating":7}, {"tactical_fender":7}]}
+	]},
+	{"howitzer":[
+	{"makeshift_cannon":[{"steel_pipe":10}, {"steel":10}, {"sticky_cobweb":5}, {"polymer_coating":6}]},
+	{"china_lake":[{"spring":10}, {"engineering_plastic":10}, {"strange_metal":6}, {"polymer_coating":6}, {"tactical_fender":5}]},
+	{"assault_howitzer":[{"hexagon_nail":12}, {"iron_casting":12}, {"cloth":12}, {"bone":24}, {"polymer_coating":4}]},
+	{"bazooka":[{"medium_carbon_stell":10}, {"raw_rubber":17}, {"special_part":8}, {"polymer_coating":7}, {"tactical_fender":7}]}
+	]},
+	{"ft-pistol-shield":[
+	{"flamethrower":[{"hexagon_nail":12}, {"iron_casting":12}, {"cloth":12}, {"bone":24}, {"polymer_coating":4}]},
+	{"revolver":[{"hexagon_nail":12}, {"iron_casting":12}, {"cloth":12}, {"bone":24}, {"polymer_coating":4}]},
+	{"z5_revolver":[{"special_cast_iron":12}, {"soft_magnetic_alloy":12}, {"elastic_rubber":14}, {"tactical_fender":12}, {"polymer_coating":12}]},
+	{"steel_shield":[{"nylon_cloth":10}, {"iron_casting":12}, {"cloth":12}, {"claw":24}, {"film_fabric":4}]},
+	{"alloy_shield":[{"hardened_ceramic":12}, {"concrete":18}, {"elastic_rubber":14}, {"bulletproof_ceramic":12}, {"film_fabric":12}]}
+	]}
+]},
+{"armor":[
+	{"body":[
+	{"field_expert":[{"cloth":9}, {"plastic":9}, {"hide":10}]},
+	{"anti_riot_police":[{"cloth":10}, {"plastic":10}, {"screw":10}]},
+	{"red_rider":[{"nylon_cloth":10}, {"hard_aluminium_alloy":10}, {"hemp_rope":10}, {"film_fabric":4}]},
+	{"crimson_azure_bone":[{"nylon_cloth":10}, {"iron_casting":12}, {"plastic":12}]}
+	]},
+	{"advanced":[
+	{"camo_vanguard":[{"nylon_cloth":10}, {"iron_casting":12}, {"cloth":12}, {"film_fabric":4}]},
+	{"punk_jacket":[{"nylon_cloth":10}, {"plastic":12}, {"hexagon_nail":12}, {"film_fabric":4}]},
+	{"medical_person":[{"polyster_cloth":10},{"leather":10}, {"hard_aluminium_alloy":10}, {"beast_fur":13},{"film_fabric":4}]},
+	{"anti_riot":[{"polyster_cloth":10},{"beast_tendon":13}, {"plastic":12}, {"film_fabric":4}]},
+	{"cobra":[{"flannel":10},{"sewing_thread":10}, {"polyster_cloth":13}, {"film_fabric":5},{"bulletproof_ceramic":5}]},
+	{"black_devil":[{"leather":13},{"sewing_thread":10}, {"nylon_cloth":13}, {"film_fabric":5},{"bulletproof_ceramic":5}]},
+	{"heavy_desert_orange_armed":[{"fiber_cloth":10},{"honeycomb_board":10}, {"plastic":18}, {"film_fabric":6},{"bulletproof_ceramic":6}]},
+	{"blue_azure_crimson_assault":[{"fiber_cloth":10},{"fiberglass+":10}, {"sewing_thread":11}, {"film_fabric":6},{"bulletproof_ceramic":6}]},
+	{"dark_night_flame_armor":[{"polyamide_fabric":10},{"weapon_part":11}, {"fiber_cloth":11}, {"film_fabric":6},{"bulletproof_ceramic":6}]},
+	{"flame_shadow":[{"polyamide_fabric":10},{"weapon_part":11}, {"fiber_cloth":11}, {"film_fabric":6},{"bulletproof_ceramic":6}]},
+	{"horizon":[{"blended_material":10},{"silk":17}, {"special_part":8}, {"film_fabric":7},{"bulletproof_ceramic":7}]},
+	{"platinum":[{"nanofiber":12},{"plain_fabric":20}, {"elastic_rubber":14}, {"bulletproof_ceramic":12}, {"film_fabric":12}]}
+	]},
+	{"hat":[
+	{"baseball_cap":[{"cloth":12}, {"plastic":12}, {"hemp_rope":10}]},
+	{"warm_cotton":[{"nylon_cloth":10}, {"cloth":12}, {"beast_tendon":13}, {"film_fabric":4}]},
+	{"punk_mask":[{"nylon_cloth":10}, {"cloth":12}, {"hemp_rope":10}, {"film_fabric":4}]},
+	{"anti_riot_mask":[{"polyster_cloth":10}, {"cloth":12}, {"hexagon_nail":12}, {"film_fabric":4}]},
+	{"tech_vanguard":[{"flannel":10}, {"leather":13}, {"pearl":18}, {"film_fabric":5},{"bulletproof_ceramic":5}]},
+	{"premium_goggles":[{"nylon_cloth":10}, {"iron_casting":12}, {"cloth":12}, {"claw":24}, {"film_fabric":4}]},
+	{"assault_helmet":[{"fiberglass+":10}, {"titanium_alloy":10}, {"leather":14}, {"film_fabric":6},{"bulletproof_ceramic":6}]},
+	{"tactical_communicator":[{"polyamide_fabric":10}, {"flannel_cloth":10}, {"film_fabric":6},{"bulletproof_ceramic":6}]},
+	{"battle_domination":[{"high_temperature_alloy":10}, {"amalgam":10}, {"film_fabric":6},{"bulletproof_ceramic":6}]},
+	{"armed_communication":[{"blended_material":10}, {"polyamide_fabric":10}, {"special_part":8}, {"film_fabric":7},{"bulletproof_ceramic":7}]}
+	]}
+]}]
