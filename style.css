@@ -21,7 +21,7 @@ h2 {
 }
 
 body {
-  background-image: url(/background.jpg);
+  background-image: url('https://nriik.github.io/hargabahan/background.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
