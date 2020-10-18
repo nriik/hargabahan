@@ -80,6 +80,14 @@
 	{"horizon":[{"blended_material":10},{"silk":17}, {"special_part":8}, {"film_fabric":7},{"bulletproof_ceramic":7}]},
 	{"platinum":[{"nanofiber":12},{"plain_fabric":20}, {"elastic_rubber":14}, {"bulletproof_ceramic":12}, {"film_fabric":12}]}
 	]},
+	{"shield":[
+	{"shield_lvl_1":[{"polyster_cloth":10}, {"beast_tendon":13}, {"sticky_cobweb":5}, {"film_fabric":6}]},
+	{"shield_lvl_2":[{"leather":13}, {"sewing_thread":10}, {"strange_metal":6}, {"film_fabric":6}, {"bulletproof_ceramic":5}]},
+	{"shield_lvl_3":[{"fiber_cloth":10}, {"fiberglass+":10}, {"dormant_insect_egg":7}, {"film_fabric":6}, {"bulletproof_ceramic":6}]},
+	{"shield_lvl_4":[{"polyamide_fabric":10}, {"titanium_alloy":11}, {"mutant_feather":8}, {"film_fabric":6}, {"bulletproof_ceramic":6}]},
+	{"shield_lvl_5":[{"blended_material":10}, {"quartz_sand":17}, {"special_part":8}, {"film_fabric":7}, {"bulletproof_ceramic":7}]},
+	{"advanced_shield":[{"nylon_cloth":10}, {"iron_casting":12}, {"cloth":12}, {"claw":24}, {"film_fabric":4}]}
+	]},
 	{"hat":[
 	{"baseball_cap":[{"cloth":12}, {"plastic":12}, {"hemp_rope":10}]},
 	{"warm_cotton":[{"nylon_cloth":10}, {"cloth":12}, {"beast_tendon":13}, {"film_fabric":4}]},
@@ -91,5 +99,45 @@
 	{"tactical_communicator":[{"polyamide_fabric":10}, {"flannel_cloth":10}, {"film_fabric":6},{"bulletproof_ceramic":6}]},
 	{"battle_domination":[{"high_temperature_alloy":10}, {"amalgam":10}, {"film_fabric":6},{"bulletproof_ceramic":6}]},
 	{"armed_communication":[{"blended_material":10}, {"polyamide_fabric":10}, {"special_part":8}, {"film_fabric":7},{"bulletproof_ceramic":7}]}
+	]}
+]},
+{"Drone":[
+	{"chip":[
+	{"basic":[{"polymer_coating":2}, {"kyanite":12}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]},
+	{"self_destruck":[{"polymer_coating":2}, {"potassium_nitrate":12}, {"nylon_cloth":5}, {"malachite":12}, {"nail":5}]},
+	{"pack":[{"polymer_coating":2}, {"tree_oil":25}, {"nylon_cloth":5}, {"malachite":12}, {"nail":5}]},
+	{"combat":[{"polymer_coating":2}, {"beast_horn":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]},
+	{"medical":[{"polymer_coating":2}, {"hemp_seed":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]},
+	{"gathering":[{"polymer_coating":2}, {"hemp_seed":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]},
+	{"assist":[{"polymer_coating":2}, {"beast_horn":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]},
+	{"war_tiger":[{"polymer_coating":2}, {"beast_horn":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]}
+	]},
+	{"navigator":[
+	{"basic_navigator":[{"film_fabric":2}, {"nylon_cloth":5}, {"hexagon_nail":6}, {"cracked_tough_hide":25}, {"glue":5}]},
+	{"fair_navigator":[{"film_fabric":2}, {"leather":5}, {"screw":6}, {"cracked_tough_hide":25}, {"tungsten_rod":5}]},
+	{"epic_navigator":[{"hard_aluminium_alloy":10}, {"spring":8}, {"sewing_thread":8}, {"bulletproof_ceramic":4}, {"film_fabric":4}]},
+	{"super_navigator":[{"flannel_cloth":8}, {"fiberglass+":9}, {"titanium_alloy":9}, {"silica_gel":8}, {"bulletproof_ceramic":5}]},
+	{"ultimate_navigator":[{"nano_fiber":5}, {"plain_fabric":5}, {"blended_material":8}, {"polyamide_fabric":8}, {"bulletproof_ceramic":5}]}
+	]},
+	{"framework":[
+	{"basic_framework":[{"film_fabric":2}, {"nylon_cloth":5}, {"hexagon_nail":6}, {"kenaf_leaf":7}, {"glue":5}]},
+	{"fair_framework":[{"film_fabric":2}, {"polyester_cloth":5}, {"screw":6}, {"kenaf_leaf":7}, {"tape":5}]},
+	{"super_framework1":[{"sewing_thread":6}, {"spring":6}, {"hard_aluminium_alloy":7}, {"nylon_cloth":7}, {"film_fabric":3}]},
+	{"epic_framework":[{"honeycomb_board":7}, {"fiberglass+":7}, {"flannel":8}, {"film_fabric":4}, {"bulletproof_ceramic":4}]},
+	{"super_framework2":[{"polyamide_fabric":8}, {"silica_gel":8}, {"medium_carbon_steel":8}, {"film_fabric":5}, {"bulletproof_ceramic":5}]}
+	]},
+	{"engine":[
+	{"basic_engine":[{"polymer_coating":2}, {"hard_aluminium_alloy":5}, {"plastic":6}, {"rugged_leather":12}, {"nail":5}]},
+	{"fair_engine":[{"polymer_coating":2}, {"steel_pipe":5}, {"cloth":6}, {"beast_fur":7}, {"glass":5}]},
+	{"epic_engine":[{"tungsen_rod":10}, {"titanium_alloy":7}, {"steel_pipe":10}, {"iron_casting":12}, {"tactical_fender":4}]},
+	{"super_engine":[{"high_temperature_alloy":8}, {"low_temp_steel":8}, {"blended_material":8}, {"film_fabric":5}, {"bulletproof_ceramic":5}]}
+	]},
+	{"energy_core":[
+	{"basic_energy_core":[{"film_fabric":2}, {"hard_aluminium_alloy":5}, {"plastic":6}, {"grease":12}, {"nail":5}]},
+	{"fair_energy_core":[{"film_fabric":2}, {"steel":5}, {"cloth":6}, {"beast_tooth":12}, {"glass":5}]},
+	{"super_energy_core1":[{"leather":7}, {"steel_pipe":7}, {"beast_fur":10}, {"tungsen_rod":7}, {"film_fabric":3}]},
+	{"epic_energy_core":[{"engineering_plastic":8}, {"spring":8}, {"sewing_thread":8}, {"fiberglass":10}, {"film_fabric":4}]},
+	{"super_energy_core2":[{"amalgam":8}, {"engineering_plastic":8}, {"steel":12}, {"low_temp_steel":8}, {"bulletproof_ceramic":5}]},
+	{"ultimate_energy_core":[{"special_cast_iron":5}, {"soft_magnetic_alloy":5}, {"medium_carbon_steel":8}, {"high_temperature_alloy":8}, {"bulletproof_ceramic":5}]}
 	]}
 ]}]
