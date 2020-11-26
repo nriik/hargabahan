@@ -58,7 +58,7 @@ function loadd() {
     						var hhh = document.createElement("br");
     						document.getElementById(key3).appendChild(hhh);
     						var g = document.createElement("BUTTON");
-  							g.setAttribute("onclick", "closeNav2('"+key3+"');");
+  							g.setAttribute("onclick", "hidej(); closeNav2('"+key3+"');");
   							g.setAttribute("id", "clsbtn");
   							var gg = document.createTextNode('Close');
   							g.appendChild(gg);
@@ -180,6 +180,14 @@ function showj(jns) {
     }
     anu =  document.getElementsByName(jns)[0];
   	anu.style.display = "block";
+}
+
+function hidej() {
+  var i, tabcontent, anu;
+    tabcontent = document.getElementsByClassName("main");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
 }
 
 function openNav2(jnis) {
