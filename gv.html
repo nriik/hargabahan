@@ -1,0 +1,555 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LA - Gathering Voucher</title>
+<link rel="icon" type="image/png" href="bellato.png">
+<link rel="stylesheet" href="">
+</head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 35%;
+  padding: 10px;
+  border: solid;
+  border-color: gray;
+  overflow-x: auto;
+  height: 500px; 
+}
+
+.column2 {
+  float: left;
+  width: 65%;
+  padding: 10px;
+  border: solid;
+  border-color: gray;
+  overflow-x: auto;
+  height: 500px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<body >
+<div style="background-color:#bbb; border:solid; border-color:gray;">
+<center>
+<div style="text-align:left; border:solid; border-color:#fff; background-color:#bbb; display:inline-block; white-space:nowrap;">
+	<input type="checkbox" id="logger" name="cert" onclick="show(this);"><label for="logger">Logger</label><br>
+	<input type="checkbox" id="miner" name="cert" onclick="show(this);"><label for="miner">Miner</label><br>
+	<input type="checkbox" id="picker" name="cert" onclick="show(this);"><label for="picker">HempPicker</label><br>
+</div>
+<div style="text-align:left; border:solid; border-color:#fff; background-color:#bbb; display:inline-block; white-space:nowrap;">
+	<input type="checkbox" id="nonexl" name="item" onclick="showitem(this);"><label for="nonexl">Show Non Exclusif</label><br>
+	<input type="checkbox" id="rare" name="item" onclick="showitem(this);"><label for="rare">Show Rare Item</label><br>
+	<input type="checkbox" id="common" name="item" onclick="showitem(this);"><label for="common">Show Common Item</label><br>
+</div><br>
+<div style="text-align:left; border:solid; border-color:#fff; background-color:#bbb; display:inline-block; white-space:nowrap;">
+	<input type="checkbox" id="map9" name="map" onclick="showmap(this);"><label for="map9">Map Lvl.9</label>
+	<input type="checkbox" id="map8" name="map" onclick="showmap(this);"><label for="map8">Map Lvl.8</label>
+	<input type="checkbox" id="map7" name="map" onclick="showmap(this);"><label for="map7">Map Lvl.7</label><br>
+	<input type="checkbox" id="map6" name="map" onclick="showmap(this);"><label for="map6">Map Lvl.6</label>
+	<input type="checkbox" id="map5" name="map" onclick="showmap(this);"><label for="map5">Map Lvl.5</label>
+	<input type="checkbox" id="map4" name="map" onclick="showmap(this);"><label for="map4">Map Lvl.4</label><br>
+	<input type="checkbox" id="map3" name="map" onclick="showmap(this);"><label for="map3">Map Lvl.3</label>
+	<input type="checkbox" id="map2" name="map" onclick="showmap(this);"><label for="map2">Map Lvl.2</label>
+	<input type="checkbox" id="map1" name="map" onclick="showmap(this);"><label for="map1">Map Lvl.1</label><br>
+</div><hr>
+</center>
+</div>
+
+<div class="column" style="background-color:#bbb;">
+<div name="map9" style="display:none; white-space:nowrap;"> 
+	<div class="valuable" name="logger" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Birch Bark<br><input type="number" class="v9" name="birchbark" id="210" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable"name="miner" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Apatite<br><input type="number" class="v9" name="apatite" id="249" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="picker" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Urtica Stem<br><input type="number" class="v9" name="urticastem" id="298" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Tentacle<br><input type="number" class="v9" name="tentacle" id="171" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	White Birch<br><input type="number" class="r9" name="whitebirch" id="67" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Phosphorite Ore<br><input type="number" class="r9" name="phosphoriteore" id="76" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Urtica Leaf<br><input type="number" class="r9" name="urticaleaf" id="88" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Bone Spur<br><input type="number" class="r9" name="bonespur" id="78" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+<div name="map8" style="display:none; white-space:nowrap;"> 
+	<div class="valuable" name="logger" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Camphor Leaf<br><input type="number" class="v8" name="camphorleaf" id="194" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="miner" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Bornite<br><input type="number" class="v8" name="bornite" id="229" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="picker" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Bugbane Stem<br><input type="number" class="v8" name="bugbanestem" id="275" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Beast Antler<br><input type="number" class="v8" name="beastantler" id="158" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Camphor<br><input type="number" class="r8" name="camphor" id="51" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Volcanic Rock<br><input type="number" class="r8" name="volcanicrock" id="70" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Bugbane<br><input type="number" class="r8" name="bugbane" id="81" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Dorsal Fin<br><input type="number" class="r8" name="dorsalfin" id="72" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+<div name="map7" style="display:none; white-space:nowrap;"> 
+	<div class="valuable" name="logger" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Elm Bark<br><input type="number" class="v7" name="elmbark" id="178" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="miner" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Pyrite<br><input type="number" class="v7" name="pyrite" id="210" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="picker" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Dogbane Stalk<br><input type="number" class="v7" name="dogbanestalk" id="252" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Scale<br><input type="number" class="v7" name="scale" id="145" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Elm Leaves<br><input type="number" class="r7" name="elmleaves" id="56" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Kamacite<br><input type="number" class="r7" name="kamacite" id="65" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Kendir<br><input type="number" class="r7" name="kendir" id="74" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Beast Tail<br><input type="number" class="r7" name="beasttail" id="66" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+<div name="map6" style="display:none; white-space:nowrap;"> 	
+	<div class="valuable" name="logger" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Cedar Leaves<br><input type="number" class="v6" name="cedarleaves" id="162" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="miner" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Rare Earth Ore<br><input type="number" class="v6" name="rareearthore" id="191" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="picker" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Castor Bast<br><input type="number" class="v6" name="castorbast" id="229" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Beast Spine<br><input type="number" class="v6" name="beastspine" id="132" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Redwood<br><input type="number" class="r6" name="redwood" id="51" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Gold Ore<br><input type="number" class="r6" name="goldore" id="59" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Nettle Leaf<br><input type="number" class="r6" name="nettleleaf" id="68" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Beast Hoof<br><input type="number" class="r6" name="beasthoof" id="54" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+<div name="map5" style="display:none; white-space:nowrap;"> 	
+	<div class="valuable" name="logger" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Birch Root<br><input type="number" class="v5" name="birchroot" id="146" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="miner" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Pyrargyrite<br><input type="number" class="v5" name="pyrargyrite" id="172" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="picker" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Kenaf Bast<br><input type="number" class="v5" name="kenafbast" id="206" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Rugged Tail<br><input type="number" class="v5" name="ruggedtail" id="118" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Seaweed Leaf<br><input type="number" class="v5" name="seaweedleaf" id="135" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Old Oak<br><input type="number" class="r5" name="oldoak" id="46" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Silver Ore<br><input type="number" class="r5" name="silverore" id="53" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Sisal Leaf<br><input type="number" class="r5" name="sisalleaf" id="61" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Beast Blood<br><input type="number" class="r5" name="beastblood" id="54" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+<div name="map4" style="display:none; white-space:nowrap;"> 
+	<div class="valuable" name="logger" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Broad Leaf<br><input type="number" class="v4" name="broadleaf" id="144" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="miner" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Silicon<br><input type="number" class="v4" name="silicon" id="144" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="valuable" name="picker" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Jute Stem<br><input type="number" class="v4" name="jutestem" id="144" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Beast Fur<br><input type="number" class="v4" name="beastfur" id="108" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Boxwood<br><input type="number" class="r4" name="boxwood" id="39" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Copper Ore<br><input type="number" class="r4" name="copperore" id="48" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Jute Leaf<br><input type="number" class="r4" name="juteleaf" id="53" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Jute Leaf<br><input type="number" class="r4" name="juteleaf" id="53" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Jute Leaf<br><input type="number" class="r4" name="juteleaf" id="53" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Beast Tooth<br><input type="number" class="r4" name="beasttooth" id="48" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+<div name="map3" style="display:none; white-space:nowrap;"> 
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Cypress Leaf<br><input type="number" class="v3" name="cypressleaf" id="72" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Ginkgo Seedling<br><input type="number" class="v3" name="ginkgoseedling" id="576" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Kyanite<br><input type="number" class="v3" name="kyanite" id="87" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Flax Petal<br><input type="number" class="v3" name="flaxpetal" id="108" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Beast Horn<br><input type="number" class="v3" name="beasthorn" id="48" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	CrackedTough Hide<br><input type="number" class="v3" name="crackedtoughhide" id="35" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+ 	
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Old Cypress<br><input type="number" class="r3" name="oldcypress" id="34" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Malachite<br><input type="number" class="r3" name="malachite" id="40" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Aluminium Ore<br><input type="number" class="r3" name="aluminiumore" id="39" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Kenaf Leaf<br><input type="number" class="r3" name="kenafleaf" id="45" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Flax Leaf<br><input type="number" class="r3" name="flaxleaf" id="48" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Rugged Leather<br><input type="number" class="r3" name="ruggedleather" id="40" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Grease<br><input type="number" class="r3" name="grease" id="36" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+<div name="map2" style="display:none; white-space:nowrap;">
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Woodcore<br><input type="number" class="v2" name="woodcore" id="63" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Oak Seedling<br><input type="number" class="v2" name="oakseedling" id="480" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Sulfur<br><input type="number" class="v2" name="sulfur" id="72" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Hemp Bast<br><input type="number" class="v2" name="hempbast" id="96" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Beast Tendon<br><input type="number" class="v2" name="beasttendon" id="36" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Resin<br><input type="number" class="r2" name="resin" id="29" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Tin Ore<br><input type="number" class="r2" name="tinore" id="44" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Hemp Stem<br><input type="number" class="r2" name="hempstem" id="39" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Claw<br><input type="number" class="r2" name="claw" id="29" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+<div name="map1" style="display:none; white-space:nowrap;"> 
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Hardwood Vine<br><input type="number" class="v1" name="hardwoodvine" id="60" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Sapling<br><input type="number" class="v1" name="sapling" id="140" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Flint<br><input type="number" class="v1" name="flint" id="70" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="nonexl" style="background-color: lightblue; display:none; white-space:nowrap;">
+	Hide<br><input type="number" class="v1" name="hide" id="60" min="0" max="180" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Twig<br><input type="number" class="r1" name="twig" id="26" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Iron Ore<br><input type="number" class="r1" name="ironore" id="30" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Plantroot<br><input type="number" class="r1" name="plantroot" id="36" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="rare" style="background-color: lightgreen; display:none; white-space:nowrap;">
+	Bone<br><input type="number" class="r1" name="bone" id="50" min="0" max="360" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+<div name="common" style="display:block; white-space:nowrap;"> 
+	<div class="common" style="background-color: gray; display:none; white-space:nowrap;">
+	Wood<br><input type="number" class="co" name="wood" id="60" min="0" max="2000" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="common" style="background-color: gray; display:none; white-space:nowrap;">
+	Stone<br><input type="number" class="co" name="stone" id="120" min="0" max="2000" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+	<div class="common" style="background-color: gray; display:none; white-space:nowrap;">
+	Hemp<br><input type="number" class="co" name="hemp" id="180" min="0" max="2000" value="0" onclick="this.select()" oninput="hitung(this)"></div>
+</div>
+</div>
+
+<div class="column2" style="background-color:#bbb; height:350px">
+	<div style="display:inline-block; white-space:nowrap;">
+	<b>Area Operation</b><br>
+	<input type="checkbox" id="teaparty" class="ao" name="10000" value="0" onclick="aops(this);"><label for="teaparty">Tea Party</label><br>
+	<input type="checkbox" id="ir" class="ao" name="10000" value="0" onclick="aops(this);"><label for="ir">Island Reef</label><br>
+	<input type="checkbox" id="hs" class="ao" name="9600" value="0" onclick="aops(this);"><label for="hs">Hillside</label><br>
+	<input type="checkbox" id="bm" class="ao" name="8400" value="0" onclick="aops(this);"><label for="bm">Black Mire</label><br>
+	<input type="checkbox" id="hf" class="ao" name="8400" value="0" onclick="aops(this);"><label for="hf">Highland Factory</label><br>
+	<input type="checkbox" id="gd" class="ao" name="8400" value="0" onclick="aops(this);"><label for="gd">Golden Deser</label><br>
+	<input type="checkbox" id="ff" class="ao" name="6000" value="0" onclick="aops(this);"><label for="ff">Fall Forest</label><hr>
+	<input type="checkbox" id="gift" class="ao" name="2500" value="0" onclick="aops(this);"><label for="gift">Gift NPC +2.500</label><hr>
+	<b>Total Kebutuhan Voucher</b><br><input type="number" id="totalall" min="0" value="0" disabled><br>
+	<b>Total Pendapatan Voucher</b><br><input type="number" id="totalall2" min="0" value="0" disabled><hr>
+	<input type="text" id="status" value="STATUS" style="background-color:white; text-align:center;" disabled>
+	</div>
+</div>
+<div class="column2" style="background-color: #bbb; display:block; border-color:gray; white-space:nowrap; height:150px">
+	<center><div style="display:block; white-space:nowrap;">
+	Valuable Lvl.9<br><input style="background-color: lightblue; width:7em" type="number" id="totalv9" min="0" value="0" disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Valuable Lvl.8<br><input style="background-color: lightblue; width:7em" type="number" id="totalv8" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Valuable Lvl.7<br><input style="background-color: lightblue; width:7em" type="number" id="totalv7" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Valuable Lvl.6<br><input style="background-color: lightblue; width:7em" type="number" id="totalv6" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Valuable Lvl.5<br><input style="background-color: lightblue; width:7em" type="number" id="totalv5" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Valuable Lvl.4<br><input style="background-color: lightblue; width:7em" type="number" id="totalv4" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Valuable Lvl.3<br><input style="background-color: lightblue; width:7em" type="number" id="totalv3" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Valuable Lvl.2<br><input style="background-color: lightblue; width:7em" type="number" id="totalv2" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Valuable Lvl.1<br><input style="background-color: lightblue; width:7em" type="number" id="totalv1" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Rare Lvl.9<br><input style="background-color: lightgreen; width:7em" type="number" id="totalr9" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Rare Lvl.8<br><input style="background-color: lightgreen; width:7em" type="number" id="totalr8" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Rare Lvl.7<br><input style="background-color: lightgreen; width:7em" type="number" id="totalr7" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Rare Lvl.6<br><input style="background-color: lightgreen; width:7em" type="number" id="totalr6" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Rare Lvl.5<br><input style="background-color: lightgreen; width:7em" type="number" id="totalr5" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Rare Lvl.4<br><input style="background-color: lightgreen; width:7em" type="number" id="totalr4" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Rare Lvl.3<br><input style="background-color: lightgreen; width:7em" type="number" id="totalr3" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Rare Lvl.2<br><input style="background-color: lightgreen; width:7em" type="number" id="totalr2" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Rare Lvl.1<br><input style="background-color: lightgreen; width:7em" type="number" id="totalr1" min="0" value="0"  disabled></div>
+	<div style="display:block; white-space:nowrap;">
+	Common<br><input style="background-color: white; width:7em" type="number" id="totalco" min="0" value="0"  disabled></div></center>
+</div>
+
+
+
+
+<script>
+function hitung(el){
+  if(el.value != ""){
+    if(parseInt(el.value) < parseInt(el.min)){
+      el.value = el.min;
+    }
+    if(parseInt(el.value) > parseInt(el.max)){
+      el.value = el.max;
+    }
+    
+    var totv9 = 0;
+    var v9 = document.getElementsByClassName('v9');
+    var totv8 = 0;
+    var v8 = document.getElementsByClassName('v8');
+    var totv7 = 0;
+    var v7 = document.getElementsByClassName('v7');
+    var totv6 = 0;
+    var v6 = document.getElementsByClassName('v6');
+    var totv5 = 0;
+    var v5 = document.getElementsByClassName('v5');
+    var totv4 = 0;
+    var v4 = document.getElementsByClassName('v4');
+    var totv3 = 0;
+    var v3 = document.getElementsByClassName('v3');
+    var totv2 = 0;
+    var v2 = document.getElementsByClassName('v2');
+    var totv1 = 0;
+    var v1 = document.getElementsByClassName('v1');
+    var totr9 = 0;
+    var r9 = document.getElementsByClassName('r9');
+    var totr8 = 0;
+    var r8 = document.getElementsByClassName('r8');
+    var totr7 = 0;
+    var r7 = document.getElementsByClassName('r7');
+    var totr6 = 0;
+    var r6 = document.getElementsByClassName('r6');
+    var totr5 = 0;
+    var r5 = document.getElementsByClassName('r5');
+    var totr4 = 0;
+    var r4 = document.getElementsByClassName('r4');
+    var totr3 = 0;
+    var r3 = document.getElementsByClassName('r3');
+    var totr2 = 0;
+    var r2 = document.getElementsByClassName('r2');
+    var totr1 = 0;
+    var r1 = document.getElementsByClassName('r1');
+    var totco = 0;
+    var co = document.getElementsByClassName('co');
+    for(var i=0;i<v9.length;i++){
+        if(parseInt(v9[i].value))
+        	totv9 += parseInt(v9[i].value) * parseInt(v9[i].id);
+    }
+    document.getElementById('totalv9').value = totv9;
+    
+    for(var j=0;j<v8.length;j++){
+        if(parseInt(v8[j].value))
+        	totv8 += parseInt(v8[j].value) * parseInt(v8[j].id);
+    }
+    document.getElementById('totalv8').value = totv8;
+    
+    for(var k=0;k<v7.length;k++){
+        if(parseInt(v7[k].value))
+        	totv7 += parseInt(v7[k].value) * parseInt(v7[k].id);
+    }
+    document.getElementById('totalv7').value = totv7;
+
+    for(var k=0;k<v6.length;k++){
+        if(parseInt(v6[k].value))
+        	totv6 += parseInt(v6[k].value) * parseInt(v6[k].id);
+    }
+    document.getElementById('totalv6').value = totv6;
+    
+    for(var k=0;k<v5.length;k++){
+        if(parseInt(v5[k].value))
+        	totv5 += parseInt(v5[k].value) * parseInt(v5[k].id);
+    }
+    document.getElementById('totalv5').value = totv5;
+
+    for(var k=0;k<v4.length;k++){
+        if(parseInt(v4[k].value))
+        	totv4 += parseInt(v4[k].value) * parseInt(v4[k].id);
+    }
+    document.getElementById('totalv4').value = totv4;
+
+    for(var k=0;k<v3.length;k++){
+        if(parseInt(v3[k].value))
+        	totv3 += parseInt(v3[k].value) * parseInt(v3[k].id);
+    }
+    document.getElementById('totalv3').value = totv3;
+
+    for(var k=0;k<v2.length;k++){
+        if(parseInt(v2[k].value))
+        	totv2 += parseInt(v2[k].value) * parseInt(v2[k].id);
+    }
+    document.getElementById('totalv2').value = totv2;
+
+    for(var k=0;k<v1.length;k++){
+        if(parseInt(v1[k].value))
+        	totv1 += parseInt(v1[k].value) * parseInt(v1[k].id);
+    }
+    document.getElementById('totalv1').value = totv1;
+
+    for(var k=0;k<r9.length;k++){
+        if(parseInt(r9[k].value))
+        	totr9 += parseInt(r9[k].value) * parseInt(r9[k].id);
+    }
+    document.getElementById('totalr9').value = totr9;
+
+    for(var k=0;k<r8.length;k++){
+        if(parseInt(r8[k].value))
+        	totr8 += parseInt(r8[k].value) * parseInt(r8[k].id);
+    }
+    document.getElementById('totalr8').value = totr8;
+
+    for(var k=0;k<r7.length;k++){
+        if(parseInt(r7[k].value))
+        	totr7 += parseInt(r7[k].value) * parseInt(r7[k].id);
+    }
+    document.getElementById('totalr7').value = totr7;
+
+    for(var k=0;k<r6.length;k++){
+        if(parseInt(r6[k].value))
+        	totr6 += parseInt(r6[k].value) * parseInt(r6[k].id);
+    }
+    document.getElementById('totalr6').value = totr6;
+
+    for(var k=0;k<r5.length;k++){
+        if(parseInt(r5[k].value))
+        	totr5 += parseInt(r5[k].value) * parseInt(r5[k].id);
+    }
+    document.getElementById('totalr5').value = totr5;
+
+    for(var k=0;k<r4.length;k++){
+        if(parseInt(r4[k].value))
+        	totr4 += parseInt(r4[k].value) * parseInt(r4[k].id);
+    }
+    document.getElementById('totalr4').value = totr4;
+
+    for(var k=0;k<r3.length;k++){
+        if(parseInt(r3[k].value))
+        	totr3 += parseInt(r3[k].value) * parseInt(r3[k].id);
+    }
+    document.getElementById('totalr3').value = totr3;
+
+    for(var k=0;k<r2.length;k++){
+        if(parseInt(r2[k].value))
+        	totr2 += parseInt(r2[k].value) * parseInt(r2[k].id);
+    }
+    document.getElementById('totalr2').value = totr2;
+
+    for(var k=0;k<r1.length;k++){
+        if(parseInt(r1[k].value))
+        	totr1 += parseInt(r1[k].value) * parseInt(r1[k].id);
+    }
+    document.getElementById('totalr1').value = totr1;
+
+    for(var k=0;k<co.length;k++){
+        if(parseInt(co[k].value))
+        	totco += parseInt(co[k].value) * parseInt(co[k].id);
+    }
+    document.getElementById('totalco').value = totco;
+    document.getElementById('totalall').value = totv9+totv8+totv7+totv6+totv5+totv4+totv3+totv2+totv1+totr9+totr8+totr7+totr6+totr5+totr4+totr3+totr2+totr1+totco;
+  }
+  checkstatus();
+}
+
+function show(checkbox) {
+    var id = checkbox.id;
+    if (checkbox.checked == true){
+    	for(var i=0;i<id.length;i++){
+        	document.getElementsByName(id)[i].style.display = "block";
+    	}
+  	} else {
+     	for(var i=0;i<id.length;i++){
+        	document.getElementsByName(id)[i].style.display = "none";
+    	}
+  	}
+}
+
+function showmap(checkbox) {
+	var id = checkbox.id;
+	if (checkbox.checked == true){
+    	document.getElementsByName(id)[0].style.display = "block";
+  	} else {
+     	document.getElementsByName(id)[0].style.display = "none";
+  	}
+}
+
+function showitem(checkbox) {
+	var id = document.getElementsByClassName(checkbox.id);
+    if (checkbox.checked == true){
+    	for(var i=0;i<id.length;i++){
+        	id[i].style.display = "block";
+    	}
+  	} else {
+     	for(var i=0;i<id.length;i++){
+        	id[i].style.display = "none";
+    	}
+  	}
+}
+
+function aops(checkbox) {
+	var checkboxes = document.getElementsByClassName("ao");
+	var tot = 0;
+	for(var j=0;j<checkboxes.length;j++){
+        if (checkboxes[j].checked == true){
+    		checkboxes[j].value = parseInt(checkboxes[j].name);
+    	} else {
+    		checkboxes[j].value = 0;
+    	}
+    tot += parseInt(checkboxes[j].value);
+    }
+    document.getElementById("totalall2").value = parseInt(tot);
+checkstatus();
+}
+
+function checkstatus(){
+	var keb = document.getElementById("totalall").value;
+	var pen = document.getElementById("totalall2").value;
+	if (keb > pen) {
+		document.getElementById("status").style = "background-color:red";
+	} else {
+		document.getElementById("status").style = "background-color:green";
+	}
+}
+</script>
+</body>
+</html>
