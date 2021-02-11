@@ -92,7 +92,8 @@
 	{"shield_lvl_4":[{"polyamide_fabric":10}, {"titanium_alloy":11}, {"mutant_feather":8}, {"film_fabric":6}, {"bulletproof_ceramic":6}]},
 	{"shield_lvl_5":[{"blended_material":10}, {"quartz_sand":17}, {"special_part":8}, {"film_fabric":7}, {"bulletproof_ceramic":7}]},
 	{"shield_lvl_6":[{"electrospun_thread":6}, {"hardened_ceramic":7}, {"soft_hide":8}, {"tactical_fender":7}, {"film_fabric":7}]},
-	{"advanced_shield":[{"nylon_cloth":10}, {"iron_casting":12}, {"cloth":12}, {"claw":24}, {"film_fabric":4}]}
+	{"advanced_shield":[{"nylon_cloth":10}, {"iron_casting":12}, {"cloth":12}, {"claw":24}, {"film_fabric":4}]},
+	{"watchman_shield":[{"nylon_cloth":10}, {"hard_aluminium_alloy":10}, {"plastic":12}, {"polymer_coating":4}, {"film_fabric":4}]}
 	]},
 	{"hat":[
 	{"baseball_cap":[{"cloth":12}, {"plastic":12}, {"hemp_rope":10}]},
@@ -117,13 +118,15 @@
 	{"medical":[{"polymer_coating":2}, {"hemp_seed":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]},
 	{"gathering":[{"polymer_coating":2}, {"hemp_seed":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]},
 	{"assist":[{"polymer_coating":2}, {"beast_horn":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]},
-	{"war_tiger":[{"polymer_coating":2}, {"beast_horn":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]}
+	{"war_tiger":[{"polymer_coating":2}, {"beast_horn":7}, {"hard_aluminium_alloy":5}, {"malachite":12}, {"nail":5}]},
+	{"guardian":[{"polymer_coating":2}, {"tree_oil":25}, {"nylon_cloth":5}, {"malachite":12}, {"nail":5}]}
 	]},
 	{"navigator":[
 	{"basic_navigator":[{"film_fabric":2}, {"nylon_cloth":5}, {"hexagon_nail":6}, {"cracked_tough_hide":25}, {"glue":5}]},
 	{"fair_navigator":[{"film_fabric":2}, {"leather":5}, {"screw":6}, {"cracked_tough_hide":25}, {"tungsten_rod":5}]},
+	{"super_navigator1":[{"spring":6}, {"flannel":6}, {"engineering_plastic":6}, {"iron_casting":9}, {"film_fabric":3}]},
 	{"epic_navigator":[{"hard_aluminium_alloy":10}, {"spring":8}, {"sewing_thread":8}, {"bulletproof_ceramic":4}, {"film_fabric":4}]},
-	{"super_navigator":[{"flannel_cloth":8}, {"fiberglass+":9}, {"titanium_alloy":9}, {"silica_gel":8}, {"bulletproof_ceramic":5}]},
+	{"super_navigator2":[{"flannel_cloth":8}, {"fiberglass+":9}, {"titanium_alloy":9}, {"silica_gel":8}, {"bulletproof_ceramic":5}]},
 	{"ultimate_navigator":[{"nano_fiber":5}, {"plain_fabric":5}, {"blended_material":8}, {"polyamide_fabric":8}, {"bulletproof_ceramic":5}]},
 	{"r1_navigator":[{"electrospun_thread":5}, {"coated_fabric":4}, {"hardened_ceramic":5}, {"aramid_fiber":12}, {"tactical_fender":5}]}
 	]},
@@ -133,13 +136,16 @@
 	{"super_framework1":[{"sewing_thread":6}, {"spring":6}, {"hard_aluminium_alloy":7}, {"nylon_cloth":7}, {"film_fabric":3}]},
 	{"epic_framework":[{"honeycomb_board":7}, {"fiberglass+":7}, {"flannel":8}, {"film_fabric":4}, {"bulletproof_ceramic":4}]},
 	{"super_framework2":[{"polyamide_fabric":8}, {"silica_gel":8}, {"medium_carbon_steel":8}, {"film_fabric":5}, {"bulletproof_ceramic":5}]},
+	{"ultimate_framework":[{"amalgam":8}, {"engineering_plastic":9}, {"steel":12}, {"low_temp_steel":8}, {"bulletproof_ceramic":5}]},
 	{"r1_framework":[{"carbon_steel":5}, {"coated_fabric":4}, {"nano_fiber":5}, {"strong_steel":12}, {"bulletproof_ceramic":5}]}
 	]},
 	{"engine":[
 	{"basic_engine":[{"polymer_coating":2}, {"hard_aluminium_alloy":5}, {"plastic":6}, {"rugged_leather":12}, {"nail":5}]},
 	{"fair_engine":[{"polymer_coating":2}, {"steel_pipe":5}, {"cloth":6}, {"beast_fur":7}, {"glass":5}]},
+	{"super_engine1":[{"fiberglass":7}, {"engineering_plastic":6}, {"flannel":6}, {"pearl":10}, {"polymer_coating":3}]},
 	{"epic_engine":[{"tungsen_rod":10}, {"titanium_alloy":7}, {"steel_pipe":10}, {"iron_casting":12}, {"tactical_fender":4}]},
-	{"super_engine":[{"high_temperature_alloy":8}, {"low_temp_steel":8}, {"blended_material":8}, {"film_fabric":5}, {"bulletproof_ceramic":5}]},
+	{"super_engine2":[{"high_temperature_alloy":8}, {"low_temp_steel":8}, {"blended_material":8}, {"film_fabric":5}, {"bulletproof_ceramic":5}]},
+	{"ultimate_engine":[{"amalgam":8}, {"engineering_plastic":9}, {"steel":12}, {"low_temp_steel":8}, {"bulletproof_ceramic":5}]},
 	{"r1_engine":[{"steel_plastic_composite_pipe":5}, {"resistance_alloy":4}, {"special_cast_iron":5}, {"strong_steel":12}, {"tactical_fender":5}]}
 	]},
 	{"energy_core":[
