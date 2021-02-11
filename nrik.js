@@ -42,11 +42,15 @@ function loadd() {
     						var d = document.createElement("BUTTON");
   							d.setAttribute("class", "button-flat-outline");
   							d.setAttribute("onclick", "openNav2('"+key3+"');");
-  							var dd = document.createTextNode(key3);
-  							d.appendChild(dd);
+                d.setAttribute("style", "margin:2px 2px; float:left; color:white; background: url('img/"+ key3 +".png') no-repeat; background-size: cover; background-position: center; width:100px; height:50px;")
+  							var dd = document.createElement("SPAN");
+                dd.setAttribute("class", "button-text");
+                var ddd = document.createTextNode(key3);
+  							dd.appendChild(ddd);
+                d.appendChild(dd);
   							document.getElementsByName(key2)[0].appendChild(d);
-  							var ccdc = document.createElement("hr");
-    						document.getElementsByName(key2)[0].appendChild(ccdc);
+  							//var ccdc = document.createElement("hr");
+    						//document.getElementsByName(key2)[0].appendChild(ccdc);
   							var f = document.createElement("DIV");
     						f.setAttribute("id", key3);
     						f.setAttribute("class", "sidenav2");
