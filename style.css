@@ -21,12 +21,15 @@ h2 {
 }
 
 body {
-  background-image: url("background.jpg");
+  background-image:  
+              linear-gradient(45deg, rgba( 
+                0, 0, 0, 0.3), rgba( 
+                  255, 255, 255, 0.3));
+  background-color: #000000;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
   font-family: "Lato", sans-serif;
   transition: background-color .5s;
   position: absolute;
@@ -49,7 +52,7 @@ label {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #cfc;
+  background-color: rgba(0, 0, 0, 0.5);
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -76,9 +79,10 @@ label {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #cfc;
+  background-color: #000;
   transition: 0.5s;
   padding-top: 60px;
+  color:#fff;
 }
 
 .sidenav2 a {
@@ -108,7 +112,7 @@ label {
   position: fixed;
   padding: 16px;
   display: none;
-  top: 60;
+  top: 90;
   max-width: 100%;
   max-height: 80%;
   overflow: auto;
@@ -121,15 +125,12 @@ label {
   .sidenav2 a {font-size: 18px;}
 }
 
-
-/* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: transparent;
 }
 
-/* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
   float: left;
@@ -143,17 +144,14 @@ label {
   color: white;
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
 }
 
-/* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
@@ -173,18 +171,35 @@ label {
 }
 
 .button-flat-outline {
-    border: 1px solid #0000ff;        /* border: tebal[px] tipe[solid,dashed,dotted] warna[#hex, rgb()]; */
-    background: rgba(255,255,255,0.5);          /* set warna background menjadi transparan */
-    color: #000;                   /* ubah warna font */
-    font-size: 16px;                  /* ubah ukuran font */
+    border: 1px solid #ffffff;
+    background: rgba(255,255,255,0.5);
+    color: #000;
+    font-size: 16px; 
     padding: 0.5em 1em 0.5em 1em;
     text-transform: uppercase; 
-    border-radius: 5%        /* padding: top right bottom left; */
+    border-radius: 5%;
+    position: relative;
 }
 .button-flat-outline:hover {
-    opacity: 0.8;                     /* ubah tingkat transparansi saat cursor menuju button. 0.0 s.d 1.0 */
+    opacity: 0.8;
 }
 .button-flat-outline:active {
-    background: #550000;              /* ubah background saat button ditekan */
-    color: #FFFFFF;                   /* set warna font menjadi putih */       
+    background: #ffffff;
+    color: #000;       
+}
+.button-text {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  left: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 9px;
+}
+
+#float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
 }
